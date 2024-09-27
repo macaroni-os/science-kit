@@ -14,34 +14,17 @@ DESCRIPTION="IDE for the R language"
 HOMEPAGE="
 	http://www.rstudio.org
 	https://github.com/rstudio/rstudio/"
-SRC_URI="https://download1.rstudio.org/electron/focal/amd64/rstudio-2024.09.0-375-amd64-debian.tar.gz -> rstudio-2024.09.0.375_x86_64.pkg.tar.gz"
+SRC_URI="https://download1.rstudio.org/electron/jammy/amd64/rstudio-2024.09.0-375-amd64-debian.tar.gz -> rstudio-2024.09.0.375_x86_64.pkg.tar.gz"
 
 LICENSE="AGPL-3"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="*"
 IUSE=""
 
 
 RDEPEND="
-	app-text/pandoc
-	dev-java/aopalliance:1
-	dev-java/gin:2.1
-	dev-java/javax-inject
-	=dev-java/validation-api-1.0*:1.0[source]
-	dev-haskell/pandoc-citeproc
-	dev-lang/R[cairo]
-	dev-libs/boost:=
-    dev-cpp/yaml-cpp
-	>=dev-libs/mathjax-2.7.4
-	sys-apps/util-linux
-	sys-devel/clang:*
-	sys-libs/zlib
-    dev-db/soci[postgres,sqlite,c++11]
-	>=virtual/jre-1.8:=
-	x11-libs/pango
-	|| ( dev-libs/openssl:0= 
-	    dev-libs/libressl:0=
-    )"
+	dev-lang/R
+"
 DEPEND="${RDEPEND}"
 
 S=${WORKDIR}
@@ -57,7 +40,7 @@ src_install() {
 	mkdir -p "${D}/usr/share/applications"
 	cp "${FILESDIR}/rstudio-bin.desktop" "${D}/usr/share/applications/rstudio-bin.desktop"
 
-	dosym ../../opt/rstudio/bin/rstudio /usr/bin/rstudio-bin
+	dosym ../../opt/rstudio/rstudio /usr/bin/rstudio-bin
 }
 
 pkg_preinst() {
