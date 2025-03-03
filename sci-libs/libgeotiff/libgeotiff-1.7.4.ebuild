@@ -6,7 +6,7 @@ inherit cmake
 
 DESCRIPTION="Library for reading TIFF files with embedded tags for geographic information"
 HOMEPAGE="https://trac.osgeo.org/geotiff/ https://github.com/OSGeo/libgeotiff"
-SRC_URI="https://github.com/OSGeo/libgeotiff/tarball/533bd5592ca70100796bd2dd15619262edfcfe14 -> libgeotiff-1.7.3-533bd55.tar.gz"
+SRC_URI="https://github.com/OSGeo/libgeotiff/tarball/0a4295774fba2eff19d2129b39e4668eaf213402 -> libgeotiff-1.7.4-0a42957.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0/5"
@@ -22,7 +22,7 @@ BDEPEND="doc? ( app-text/doxygen )"
 
 post_src_unpack() {
 	if [ ! -d "${WORKDIR}/${S}" ]; then
-		mv "${WORKDIR}"/OSGeo-libgeotiff-533bd55/libgeotiff "${S}" || die
+		mv "${WORKDIR}"/OSGeo-libgeotiff-0a42957/libgeotiff "${S}" || die
 	fi
 }
 
