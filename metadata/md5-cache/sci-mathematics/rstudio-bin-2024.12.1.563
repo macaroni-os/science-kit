@@ -1,0 +1,13 @@
+DEFINED_PHASES=install postinst postrm preinst prepare unpack
+DEPEND=dev-lang/R dev-util/desktop-file-utils x11-misc/shared-mime-info
+DESCRIPTION=IDE for the R language
+EAPI=7
+HOMEPAGE=http://www.rstudio.org https://github.com/rstudio/rstudio/
+KEYWORDS=*
+LICENSE=AGPL-3
+RDEPEND=dev-lang/R
+RESTRICT=strip preserve-libs
+SLOT=0
+SRC_URI=https://download1.rstudio.org/electron/jammy/amd64/rstudio-2024.12.1-563-amd64-debian.tar.gz -> rstudio-2024.12.1.563_x86_64.pkg.tar.gz
+_eclasses_=unpacker	cbd6624f820a4289653f5dcb999bea7a	xdg	c7ba313ea1eaf266f95cc6235f7d6a07	xdg-utils	14d00d009167652b1fa363e55effe213
+_md5_=5a5ff7477bc1995eec9b84994a33adc9
