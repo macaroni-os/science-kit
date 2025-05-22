@@ -6,7 +6,7 @@ inherit	cmake-utils
 
 DESCRIPTION="SFCGAL provides standard compliant geometry types and operations."
 HOMEPAGE="http://sfcgal.org/"
-SRC_URI="https://gitlab.com/sfcgal/SFCGAL/-/archive/v2.0.0/SFCGAL-v2.0.0.tar.bz2 -> sfcgal-2.0.0.tar.bz2"
+SRC_URI="https://gitlab.com/sfcgal/SFCGAL/-/archive/v2.1.0/SFCGAL-v2.1.0.tar.bz2 -> sfcgal-2.1.0.tar.bz2"
 LICENSE="LGPL-2"
 
 SLOT="0"
@@ -25,7 +25,7 @@ DEPEND="${RDEPEND}"
 
 post_src_unpack() {
 	if [ ! -d "${S}" ]; then
-		mv SFCGAL-v2.0.0 "${S}" || die
+		mv SFCGAL-v2.1.0 "${S}" || die
 	fi
 }
 
