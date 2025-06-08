@@ -31,7 +31,6 @@ src_configure() {
 }
 
 src_install() {
-	cmake_src_install
 	rm -f "${ED}"/usr/include/suitesparse/SuiteSparse_config.h \
         "${ED}"/usr/lib64/cmake/SuiteSparse/*.cmake \
         "${ED}"/usr/lib64/cmake/SuiteSparse_config/*.cmake \
