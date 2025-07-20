@@ -16,7 +16,6 @@ DEPEND="sci-libs/colamd"
 RDEPEND="${DEPEND}"
 
 src_configure() {
-	export CFLAGS="${CFLAGS} -I/usr/include/suitesparse"
 	econf \
 		$(use_enable static-libs static)
 }
